@@ -1,0 +1,72 @@
+name: Deploy
+
+# Deploys to Vercel production once per release, and at no other time.
+#
+# Runs after the Release workflow and goes on only when release-please tagged
+# the commit that workflow ran on, which is what merging the release PR does.
+# Waiting on workflow_run rather than on the release event keeps this working
+# when release-please falls back to GITHUB_TOKEN, whose releases trigger no
+# other workflow.
+#
+# Needs the VERCEL_TOKEN, VERCEL_ORG_ID and VERCEL_PROJECT_ID secrets.
+
+on:
+  workflow_run:
+    workflows: [Release]
+    types: [completed]
+    branches: [master]
+
+concurrency:
+  group: vercel-production
+  cancel-in-progress: false
+
+jobs:
+  release-tag:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.tag.outputs.tag }}
+    steps:
+      # Asks GitHub rather than a checkout, which fetches a commit by SHA
+      # without its tags.
+      - id: tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          tag=$(gh api --paginate "repos/$GITHUB_REPOSITORY/tags" \
+            --jq ".[] | select(.commit.sha == \"$SHA\" and (.name | startswith(\"v\"))) | .name" | head -n 1)
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: release-tag
+    if: needs.release-tag.outputs.tag != ''
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.release-tag.outputs.tag }}
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      - run: pnpm install --frozen-lockfile
+      - run: npm install --global vercel@59
+      - run: vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+      # The site is fully prerendered (pnpm build runs nuxt generate). Outside
+      # Vercel's own builders nothing tells Nitro where it deploys, and it would
+      # write plain files instead of the Build Output vercel expects. The
+      # vercel-static preset writes that Build Output with no function, and
+      # carries the route rules over to the Vercel config.
+      - run: vercel build --prod --token="$VERCEL_TOKEN"
+        env:
+          NITRO_PRESET: vercel-static
+      - run: vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
