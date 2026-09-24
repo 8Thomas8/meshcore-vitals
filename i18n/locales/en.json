@@ -1,0 +1,244 @@
+{
+  "common": {
+    "close": "Close",
+    "na": "n/a",
+    "unknown": "unknown"
+  },
+  "units": {
+    "day": "d",
+    "hour": "h",
+    "minute": "min",
+    "second": "s"
+  },
+  "time": {
+    "ago": "{time} ago"
+  },
+  "nav": {
+    "repeaters": "Repeaters",
+    "companion": "Companion",
+    "openMenu": "Open menu"
+  },
+  "footer": {
+    "source": "Source on GitHub",
+    "language": "Language: {name}"
+  },
+  "connect": {
+    "tagline": "Check the MeshCore network where you stand: coverage, link quality with nearby repeaters and overall health.",
+    "button": "Connect over Bluetooth",
+    "noBluetooth": "This browser has no Web Bluetooth. Use Chrome or Edge on desktop or Android.",
+    "hint": "Turn the Companion on and keep it nearby before pairing."
+  },
+  "errors": {
+    "connectTimeout": "Timed out connecting to the node.",
+    "disconnectedWhileConnecting": "The node disconnected while connecting.",
+    "noAnswer": "The node did not answer.",
+    "scanUnsupported": "Scan refused, update the Companion firmware.",
+    "scanFailed": "The Companion could not send the scan, try again."
+  },
+  "compass": {
+    "n": "N",
+    "e": "E",
+    "s": "S",
+    "w": "W"
+  },
+  "margin": {
+    "comfortable": "Comfortable",
+    "fair": "Fair",
+    "tight": "Tight"
+  },
+  "scan": {
+    "button": "Scan",
+    "scanning": "Scanning",
+    "waiting": "Waiting for answers",
+    "prompt": "Press Scan to look around",
+    "inProgress": "Scanning for repeaters in range",
+    "done": "Scanned {ago}",
+    "never": "Not scanned yet",
+    "noLocation": "no location for directions",
+    "autoHint": "Scan again every {minutes} minutes while this page is open",
+    "nothingAnswered": "Nothing answered the last scan",
+    "auto": "Auto"
+  },
+  "coverage": {
+    "level": {
+      "good": "Good coverage",
+      "fair": "Fair coverage",
+      "weak": "Weak coverage",
+      "none": "No coverage"
+    },
+    "reason": {
+      "nothing-heard": "No repeater heard directly in the last {minutes} minutes.",
+      "confirmed": "{confirmed} usable repeaters confirmed both ways, {solid} solid. | {confirmed} usable repeaters confirmed both ways, {solid} solid.",
+      "unscanned": "{n} more not scanned yet. | {n} more not scanned yet.",
+      "unconfirmed": "Scan to confirm the repeaters hear you.",
+      "none-solid": "{usable} usable repeaters, none solid.",
+      "single": "One usable repeater, no fallback if it drops.",
+      "weak": "Only weak links, under +{fair} dB."
+    },
+    "help": {
+      "usable": "A repeater heard directly in the last {minutes} minutes is usable from +{fair} dB above the floor both ways, solid from +{comfortable} dB. The ring counts the usable ones.",
+      "levels": "Good: {count} usable, one of them solid, confirmed by a scan. Fair: one usable, or not confirmed yet. Weak: only links under +{fair} dB."
+    }
+  },
+  "repeaters": {
+    "unnamed": "Repeater {id}",
+    "unknown": "unknown",
+    "direct": "Direct",
+    "via": "{hops} via {name}",
+    "hops": "{n} hop | {n} hops",
+    "altitude": "alt. {altitude} m",
+    "noneYet": "No repeater yet",
+    "counts": "{direct} direct · {relayed}",
+    "txUnknown": "scan",
+    "empty": "A scan asks the repeaters in range to answer with how well they hear you. Repeaters that relay traffic are added as their packets come in.",
+    "relayed": "{n} relayed | {n} relayed",
+    "outOfRange": "Out of range",
+    "noneInRange": "None in range",
+    "count": "{n} repeater | {n} repeaters",
+    "showList": "Show list",
+    "hideList": "Hide list",
+    "showOutOfRange": "Show {n} out of range | Show {n} out of range",
+    "hideOutOfRange": "Hide {n} out of range | Hide {n} out of range",
+    "outOfRangeHint": "Repeaters heard directly before that did not answer the last scan"
+  },
+  "detail": {
+    "marginTitle": "Link margin, the weaker way",
+    "marginHelp": "Relative to the SF{sf} floor of {floor} dB. Fair from +{fair}, comfortable from +{comfortable}.",
+    "signal": "Signal both ways",
+    "youHearIt": "You hear it",
+    "itHearsYou": "It hears you",
+    "scanned": "scanned {ago}",
+    "scanToMeasure": "run a scan to measure",
+    "reception": "Reception this session",
+    "packets": "{n} packet | {n} packets",
+    "averageSnr": "Average SNR",
+    "lowestSnr": "Lowest SNR",
+    "chartEmpty": "The curve shows up with the first packets heard from it.",
+    "route": "Route",
+    "heardThrough": "Heard {hops} away through {through}.",
+    "unknownRepeater": "an unknown repeater",
+    "lastHopOnly": "The signal is only measured on the last hop, from the repeater in direct range.",
+    "lastHeard": "Last heard",
+    "position": "Position",
+    "groundAltitude": "Ground altitude",
+    "lookingUp": "looking up…",
+    "keyPrefix": "Key prefix",
+    "publicKey": "Public key",
+    "unknown": "unknown",
+    "outOfRange": "It did not answer the last scan, the values below are the last ones."
+  },
+  "gauge": {
+    "unit": "dB of margin",
+    "label": "Link margin {margin} dB",
+    "unknown": "Link margin unknown"
+  },
+  "chart": {
+    "summary": "SNR of the last packet heard, from {min} to {max} dB. The SF{sf} floor is {floor} dB. | SNR of the last {n} packets heard, from {min} to {max} dB. The SF{sf} floor is {floor} dB.",
+    "now": "now",
+    "floor": "SF{sf} floor"
+  },
+  "companion": {
+    "reading": "Reading the node…",
+    "readFailed": "Could not read the node, try again",
+    "updated": "Updated {ago}",
+    "refresh": "Refresh now",
+    "disconnect": "Disconnect"
+  },
+  "battery": {
+    "nominal": "Nominal",
+    "low": "Low battery",
+    "critical": "Battery critical",
+    "charged": "{percent}% charged"
+  },
+  "altitude": {
+    "label": "Altitude",
+    "gps": "GPS of this device",
+    "gpsAccuracy": "± {accuracy} m, GPS of this device",
+    "ground": "ground at your position",
+    "blocked": "location blocked or unavailable",
+    "waiting": "waiting for location",
+    "lookupFailed": "elevation lookup failed",
+    "lookingUp": "looking up the elevation"
+  },
+  "checks": {
+    "battery": "Battery",
+    "batteryCharge": "About {percent}% charged.",
+    "plugIn": "Plug the node in soon.",
+    "margin": "Link margin",
+    "marginDetail": "The last packet came in at {snr} dB SNR, the SF{sf} floor is {floor} dB. Under {fair} dB of margin, packets start getting lost.",
+    "clock": "Clock",
+    "clockOk": "In sync",
+    "clockOff": "Out of sync",
+    "clockOkDetail": "The node clock matches this device.",
+    "clockOffDetail": "The node clock differs from this device. Its messages and adverts carry wrong timestamps.",
+    "errors": {
+      "success": "Normal",
+      "warning": "Elevated",
+      "error": "High"
+    },
+    "errorsSinceBoot": "Receive errors since boot",
+    "errorsSinceBootDetail": "{n} packet heard since boot could not be decoded, usually weak or colliding signals. | {n} packets heard since boot could not be decoded, usually weak or colliding signals.",
+    "errorsSession": "Receive errors this session",
+    "errorsSessionDetail": "{n} packet heard since you connected could not be decoded, usually weak or colliding signals. | {n} packets heard since you connected could not be decoded, usually weak or colliding signals."
+  },
+  "health": {
+    "problem": "Problem",
+    "attention": "Needs attention",
+    "healthy": "Healthy",
+    "title": "Health",
+    "uptime": "Uptime",
+    "queue": "Send queue",
+    "queueWaiting": "packets waiting",
+    "queueEmpty": "nothing waiting"
+  },
+  "settings": {
+    "title": "Radio settings",
+    "frequency": "Frequency",
+    "bandwidth": "Bandwidth",
+    "txPower": "TX power",
+    "txPowerMax": "max {max} dBm",
+    "floor": "Demod floor",
+    "floorFor": "for SF{sf}"
+  },
+  "device": {
+    "title": "Device",
+    "protocol": "protocol v{version}",
+    "model": "Model",
+    "firmware": "Firmware",
+    "built": "built {date}",
+    "clockOffset": "Clock offset",
+    "clockOffsetHint": "node vs this device"
+  },
+  "reception": {
+    "title": "Reception",
+    "noiseFloor": "Noise floor",
+    "lastRssi": "Last RSSI",
+    "lastSnr": "Last SNR",
+    "margin": "Margin"
+  },
+  "traffic": {
+    "title": "Traffic",
+    "sinceBoot": "since boot",
+    "received": "Received",
+    "sent": "Sent",
+    "errors": "Receive errors",
+    "airtime": "Airtime",
+    "split": "{direct} direct · {flood} flood",
+    "badPackets": "{n} bad packet | {n} bad packets"
+  },
+  "update": {
+    "available": "A new version is available.",
+    "disconnects": "Reloading disconnects the node.",
+    "later": "Later",
+    "reload": "Reload"
+  },
+  "map": {
+    "title": "Map",
+    "toggleAttribution": "Toggle attribution"
+  },
+  "wakeLock": {
+    "label": "Stay awake",
+    "hint": "Keep the screen on while the app is shown",
+    "refused": "The browser refused to keep the screen on"
+  }
+}

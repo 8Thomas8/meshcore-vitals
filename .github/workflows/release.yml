@@ -1,0 +1,30 @@
+name: Release
+
+# On every push to master, release-please keeps an open PR
+# (`chore(main): release X.Y.Z`) that bumps the version and maintains the
+# CHANGELOG from conventional commits. When that PR is merged, release-please
+# creates the `vX.Y.Z` tag + GitHub Release.
+#
+# No image build/publish here: deployment (Vercel or other) happens
+# separately from the tag/release.
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          # A PR opened with the default GITHUB_TOKEN never triggers other
+          # workflows, so the release PR would get no CI. RELEASE_PLEASE_TOKEN
+          # (a PAT with contents and pull-requests write) fixes that. Without
+          # it the fallback keeps the workflow working, minus CI on the PR.
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN || secrets.GITHUB_TOKEN }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json

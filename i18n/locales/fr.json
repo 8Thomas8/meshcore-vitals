@@ -1,0 +1,244 @@
+{
+  "common": {
+    "close": "Fermer",
+    "na": "n/d",
+    "unknown": "inconnu"
+  },
+  "units": {
+    "day": "j",
+    "hour": "h",
+    "minute": "min",
+    "second": "s"
+  },
+  "time": {
+    "ago": "il y a {time}"
+  },
+  "nav": {
+    "repeaters": "Répéteurs",
+    "companion": "Companion",
+    "openMenu": "Ouvrir le menu"
+  },
+  "footer": {
+    "source": "Code source sur GitHub",
+    "language": "Langue : {name}"
+  },
+  "connect": {
+    "tagline": "Vérifiez le réseau MeshCore là où vous êtes : couverture, qualité des liaisons avec les répéteurs proches et santé générale.",
+    "button": "Se connecter en Bluetooth",
+    "noBluetooth": "Ce navigateur ne gère pas le Web Bluetooth. Utilisez Chrome ou Edge sur ordinateur ou sur Android.",
+    "hint": "Allumez le Companion et gardez-le à proximité avant l'appairage."
+  },
+  "errors": {
+    "connectTimeout": "Le nœud n'a pas répondu à temps pendant la connexion.",
+    "disconnectedWhileConnecting": "Le nœud s'est déconnecté pendant la connexion.",
+    "noAnswer": "Le nœud n'a pas répondu.",
+    "scanUnsupported": "Scan refusé, mettez à jour le firmware du Companion.",
+    "scanFailed": "Le Companion n'a pas pu envoyer le scan, réessayez."
+  },
+  "compass": {
+    "n": "N",
+    "e": "E",
+    "s": "S",
+    "w": "O"
+  },
+  "margin": {
+    "comfortable": "Confortable",
+    "fair": "Correcte",
+    "tight": "Juste"
+  },
+  "scan": {
+    "button": "Scanner",
+    "scanning": "Scan en cours",
+    "waiting": "En attente de réponses",
+    "prompt": "Lancez un scan",
+    "inProgress": "Recherche des répéteurs à portée",
+    "done": "Scanné {ago}",
+    "never": "Pas encore scanné",
+    "noLocation": "pas de position pour les directions",
+    "autoHint": "Rescanner toutes les {minutes} minutes tant que cette page est ouverte",
+    "nothingAnswered": "Rien n'a répondu au dernier scan",
+    "auto": "Auto"
+  },
+  "coverage": {
+    "level": {
+      "good": "Bonne couverture",
+      "fair": "Couverture correcte",
+      "weak": "Couverture faible",
+      "none": "Aucune couverture"
+    },
+    "reason": {
+      "nothing-heard": "Aucun répéteur entendu en direct ces {minutes} dernières minutes.",
+      "confirmed": "{confirmed} répéteurs utilisables confirmés dans les deux sens, dont {solid} solide. | {confirmed} répéteurs utilisables confirmés dans les deux sens, dont {solid} solides.",
+      "unscanned": "{n} autre pas encore scanné. | {n} autres pas encore scannés.",
+      "unconfirmed": "Scannez pour confirmer que les répéteurs vous entendent.",
+      "none-solid": "{usable} répéteurs utilisables, aucun solide.",
+      "single": "Un seul répéteur utilisable, aucun secours s'il décroche.",
+      "weak": "Uniquement des liaisons faibles, sous +{fair} dB."
+    },
+    "help": {
+      "usable": "Un répéteur entendu en direct ces {minutes} dernières minutes est utilisable à partir de +{fair} dB au-dessus du plancher dans les deux sens, solide à partir de +{comfortable} dB. L'anneau compte les répéteurs utilisables.",
+      "levels": "Bonne : {count} utilisables, dont un solide, confirmés par un scan. Correcte : un seul utilisable, ou pas encore confirmés. Faible : uniquement des liaisons sous +{fair} dB."
+    }
+  },
+  "repeaters": {
+    "unnamed": "Répéteur {id}",
+    "unknown": "inconnu",
+    "direct": "Direct",
+    "via": "{hops} via {name}",
+    "hops": "{n} saut | {n} sauts",
+    "altitude": "alt. {altitude} m",
+    "noneYet": "Aucun répéteur",
+    "counts": "{direct} en direct · {relayed}",
+    "txUnknown": "scan",
+    "empty": "Un scan demande aux répéteurs à portée de répondre en indiquant comment ils vous entendent. Les répéteurs qui relaient du trafic s'ajoutent au fil des paquets reçus.",
+    "relayed": "{n} relayé | {n} relayés",
+    "outOfRange": "Hors de portée",
+    "noneInRange": "Aucun à portée",
+    "count": "{n} répéteur | {n} répéteurs",
+    "showList": "Afficher la liste",
+    "hideList": "Masquer la liste",
+    "showOutOfRange": "Afficher {n} répéteur hors de portée | Afficher {n} répéteurs hors de portée",
+    "hideOutOfRange": "Masquer {n} répéteur hors de portée | Masquer {n} répéteurs hors de portée",
+    "outOfRangeHint": "Répéteurs entendus en direct auparavant, qui n'ont pas répondu au dernier scan"
+  },
+  "detail": {
+    "marginTitle": "Marge de liaison, dans le sens le plus faible",
+    "marginHelp": "Par rapport au plancher SF{sf} de {floor} dB. Correcte à partir de +{fair}, confortable à partir de +{comfortable}.",
+    "signal": "Signal dans les deux sens",
+    "youHearIt": "Vous l'entendez",
+    "itHearsYou": "Il vous entend",
+    "scanned": "scanné {ago}",
+    "scanToMeasure": "lancez un scan pour mesurer",
+    "reception": "Réception pendant cette session",
+    "packets": "{n} paquet | {n} paquets",
+    "averageSnr": "SNR moyen",
+    "lowestSnr": "SNR le plus bas",
+    "chartEmpty": "La courbe apparaît avec les premiers paquets reçus de ce répéteur.",
+    "route": "Chemin",
+    "heardThrough": "Entendu à {hops} via {through}.",
+    "unknownRepeater": "un répéteur inconnu",
+    "lastHopOnly": "Le signal n'est mesuré que sur le dernier saut, depuis le répéteur en portée directe.",
+    "lastHeard": "Dernier contact",
+    "position": "Position",
+    "groundAltitude": "Altitude du sol",
+    "lookingUp": "recherche…",
+    "keyPrefix": "Préfixe de clé",
+    "publicKey": "Clé publique",
+    "unknown": "inconnue",
+    "outOfRange": "Il n'a pas répondu au dernier scan, les valeurs ci-dessous sont les dernières connues."
+  },
+  "gauge": {
+    "unit": "dB de marge",
+    "label": "Marge de liaison {margin} dB",
+    "unknown": "Marge de liaison inconnue"
+  },
+  "chart": {
+    "summary": "SNR du dernier paquet reçu, de {min} à {max} dB. Le plancher SF{sf} est à {floor} dB. | SNR des {n} derniers paquets reçus, de {min} à {max} dB. Le plancher SF{sf} est à {floor} dB.",
+    "now": "maintenant",
+    "floor": "plancher SF{sf}"
+  },
+  "companion": {
+    "reading": "Lecture du nœud…",
+    "readFailed": "Impossible de lire le nœud, réessayez",
+    "updated": "Mis à jour {ago}",
+    "refresh": "Actualiser",
+    "disconnect": "Se déconnecter"
+  },
+  "battery": {
+    "nominal": "Normale",
+    "low": "Batterie faible",
+    "critical": "Batterie critique",
+    "charged": "chargée à {percent} %"
+  },
+  "altitude": {
+    "label": "Altitude",
+    "gps": "GPS de cet appareil",
+    "gpsAccuracy": "± {accuracy} m, GPS de cet appareil",
+    "ground": "sol à votre position",
+    "blocked": "position bloquée ou indisponible",
+    "waiting": "en attente de la position",
+    "lookupFailed": "recherche de l'altitude échouée",
+    "lookingUp": "recherche de l'altitude"
+  },
+  "checks": {
+    "battery": "Batterie",
+    "batteryCharge": "Chargée à environ {percent} %.",
+    "plugIn": "Branchez bientôt le nœud.",
+    "margin": "Marge de liaison",
+    "marginDetail": "Le dernier paquet est arrivé à {snr} dB de SNR, le plancher SF{sf} est à {floor} dB. Sous {fair} dB de marge, des paquets commencent à se perdre.",
+    "clock": "Horloge",
+    "clockOk": "Synchronisée",
+    "clockOff": "Désynchronisée",
+    "clockOkDetail": "L'horloge du nœud correspond à celle de cet appareil.",
+    "clockOffDetail": "L'horloge du nœud diffère de celle de cet appareil. Ses messages et annonces portent des horodatages faux.",
+    "errors": {
+      "success": "Taux normal",
+      "warning": "Taux élevé",
+      "error": "Taux très élevé"
+    },
+    "errorsSinceBoot": "Erreurs de réception depuis le démarrage",
+    "errorsSinceBootDetail": "{n} paquet reçu depuis le démarrage n'a pas pu être décodé, en général à cause de signaux faibles ou de collisions. | {n} paquets reçus depuis le démarrage n'ont pas pu être décodés, en général à cause de signaux faibles ou de collisions.",
+    "errorsSession": "Erreurs de réception pendant cette session",
+    "errorsSessionDetail": "{n} paquet reçu depuis votre connexion n'a pas pu être décodé, en général à cause de signaux faibles ou de collisions. | {n} paquets reçus depuis votre connexion n'ont pas pu être décodés, en général à cause de signaux faibles ou de collisions."
+  },
+  "health": {
+    "problem": "Problème",
+    "attention": "À surveiller",
+    "healthy": "En bonne santé",
+    "title": "Santé",
+    "uptime": "Allumé depuis",
+    "queue": "File d'envoi",
+    "queueWaiting": "paquets en attente",
+    "queueEmpty": "rien en attente"
+  },
+  "settings": {
+    "title": "Réglages radio",
+    "frequency": "Fréquence",
+    "bandwidth": "Bande passante",
+    "txPower": "Puissance TX",
+    "txPowerMax": "max {max} dBm",
+    "floor": "Plancher de démodulation",
+    "floorFor": "pour SF{sf}"
+  },
+  "device": {
+    "title": "Appareil",
+    "protocol": "protocole v{version}",
+    "model": "Modèle",
+    "firmware": "Firmware",
+    "built": "compilé le {date}",
+    "clockOffset": "Décalage d'horloge",
+    "clockOffsetHint": "nœud par rapport à cet appareil"
+  },
+  "reception": {
+    "title": "Réception",
+    "noiseFloor": "Bruit de fond",
+    "lastRssi": "Dernier RSSI",
+    "lastSnr": "Dernier SNR",
+    "margin": "Marge"
+  },
+  "traffic": {
+    "title": "Trafic",
+    "sinceBoot": "depuis le démarrage",
+    "received": "Reçus",
+    "sent": "Envoyés",
+    "errors": "Erreurs de réception",
+    "airtime": "Temps d'antenne",
+    "split": "{direct} en direct · {flood} en flood",
+    "badPackets": "{n} paquet invalide | {n} paquets invalides"
+  },
+  "update": {
+    "available": "Une nouvelle version est disponible.",
+    "disconnects": "Recharger déconnecte le nœud.",
+    "later": "Plus tard",
+    "reload": "Recharger"
+  },
+  "map": {
+    "title": "Carte",
+    "toggleAttribution": "Afficher ou masquer l'attribution"
+  },
+  "wakeLock": {
+    "label": "Anti-veille",
+    "hint": "Garder l'écran allumé tant que l'app est affichée",
+    "refused": "Le navigateur a refusé de garder l'écran allumé"
+  }
+}
