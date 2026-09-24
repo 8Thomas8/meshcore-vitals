@@ -70,7 +70,7 @@ export const DEFAULT_LANGUAGE = 'en-US'
 export const LOCALE_COOKIE = 'locale'
 export const LOCALE_COOKIE_MAX_AGE_SECS = 365 * 86_400
 
-export const REPOSITORY_URL = 'https://github.com/8Thomas8/meshcore-vitals'
+export const REPOSITORY_URL = 'https://github.com/8Thomas8/meshcore-vitals-app'
 
 export const NAV_ITEMS = [
   { title: 'nav.repeaters', to: '/', icon: mdiRadioTower },

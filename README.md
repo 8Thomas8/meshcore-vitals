@@ -2,7 +2,7 @@
 
 Check which repeaters hear you and how good each link is, from where you stand.
 
-[![CI](https://github.com/8Thomas8/meshcore-vitals/actions/workflows/ci.yml/badge.svg)](https://github.com/8Thomas8/meshcore-vitals/actions/workflows/ci.yml)
+[![CI](https://github.com/8Thomas8/meshcore-vitals-app/actions/workflows/ci.yml/badge.svg)](https://github.com/8Thomas8/meshcore-vitals-app/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Nuxt 4](https://img.shields.io/badge/Nuxt-4-00DC82?logo=nuxt&logoColor=white)
 ![Vue 3](https://img.shields.io/badge/Vue-3-4FC08D?logo=vuedotjs&logoColor=white)
