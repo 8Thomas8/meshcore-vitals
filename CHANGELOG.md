@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/8Thomas8/meshcore-vitals-app/compare/v1.0.1...v1.0.2) (2026-09-25)
+
+
+### Bug Fixes
+
+* keep the most accurate GPS fix at each scan ([#6](https://github.com/8Thomas8/meshcore-vitals-app/issues/6)) ([a2317fa](https://github.com/8Thomas8/meshcore-vitals-app/commit/a2317fae42543531907b1cc2aaf3e6b358c62532))
+
 ## [1.0.1](https://github.com/8Thomas8/meshcore-vitals-app/compare/v1.0.0...v1.0.1) (2026-09-24)
 
 
