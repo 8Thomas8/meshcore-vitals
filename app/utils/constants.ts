@@ -25,6 +25,15 @@ export interface Position {
   lon: number
 }
 
+// Where the GPS places the companion, carried along with this device.
+export interface CompanionFix {
+  position: Position
+  /** Metres, the radius the position is likely within. */
+  accuracy: number
+  /** When it came in, by this device's clock. */
+  at: number
+}
+
 export interface LinkSample {
   /** dB. */
   snr: number
@@ -151,12 +160,13 @@ export const MAP_MIN_FRAME_HEIGHT = 60
 export const MAP_LABEL_GAP = 14
 export const MAP_DOT_CLEARANCE = 11
 
-// A fresh GPS fix asked for at a scan, given up on after this.
-export const LOCATE_TIMEOUT_MS = 20_000
+// At a scan, the GPS gets as long as the scan to improve its fix, or less once
+// it is this accurate.
+export const LOCATE_WINDOW_MS = DISCOVER_WINDOW_MS
+export const LOCATE_PRECISE_M = 20
 
-// A fix the watch got this recently is fresh enough, and saves the GPS a
-// second request.
-export const LOCATE_MAX_AGE_MS = 10_000
+// How fast a kept fix loses accuracy, a brisk walk.
+export const FIX_DRIFT_M_PER_S = 1.5
 
 // The map animations: one frame at most this often, a pulse around direct
 // repeaters this long, and a band of light this long to run in along each link,
