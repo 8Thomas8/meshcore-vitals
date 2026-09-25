@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/8Thomas8/meshcore-vitals-app/compare/v1.0.2...v1.0.3) (2026-09-25)
+
+
+### Bug Fixes
+
+* keep the map after switching tabs during a scan ([#9](https://github.com/8Thomas8/meshcore-vitals-app/issues/9)) ([ff030c8](https://github.com/8Thomas8/meshcore-vitals-app/commit/ff030c887e7866e3b80f00a0834a2fbaf0c347e1))
+
 ## [1.0.2](https://github.com/8Thomas8/meshcore-vitals-app/compare/v1.0.1...v1.0.2) (2026-09-25)
 
 
